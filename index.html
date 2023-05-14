@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/styles.css" rel="stylesheet">
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <img src="./assets/images/logo.svg" alt="logo"/>
+        <div class="score-container">
+          <p class="score-text">SCORE</p>
+          <p id="score-number" class="score-number">0</p>
+        </div>
+      </div>
+
+      <div id="choices-container" class="choices-container">
+        <div class="choices-container-top">
+          <div id="choice-paper" onclick="determineWinner('paper')" class="choice choice-paper">
+            <img src="./assets/images/icon-paper.svg" alt="paper"/>
+          </div>
+          <div id="choice-scissors" onclick="determineWinner('scissors')" class="choice choice-scissors">
+            <img src="./assets/images/icon-scissors.svg" alt="scissors"/>
+          </div>
+        </div>
+        <div class="choices-container-bottom">
+          <div id="choice-rock" onclick="determineWinner('rock')" class="choice choice-rock">
+            <img src="./assets/images/icon-rock.svg" alt="rock"/>
+          </div>
+        </div>
+      </div>
+
+      <div id="game-container" class="game-container">
+        <div class="game-container-top">
+          <div id="player-choice-container" class="player-choice-container">
+            <p>YOU PICKED</p>
+          </div>
+          <div id="house-choice-container" class="house-choice-container">
+            <p>THE HOUSE PICKED</p>
+          </div>
+        </div>
+        <div class="game-container-bottom">
+          <div class="results-container">
+            <p id="result"></p>
+            <p id="btn-playAgain" onclick="playAgain()" class="btn btn-playAgain">PLAY AGAIN</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="btn-rules" onclick="showRules()" class="btn btn-rules">RULES</p>
+
+      <div id="rules-overlay" class="rules-overlay">
+      <div class="rules-container">
+        <div class="rules-header">
+          <span>RULES</span>
+          <img onclick="closeRules()" src="./assets/images/icon-close.svg" alt="close"> 
+        </div>
+        <img src="./assets/images/image-rules.svg" alt="rules-image"/>
+      </div>
+      </div>
+
+    </div>
+  </body>
+</html>
